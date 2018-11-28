@@ -1,0 +1,223 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/personal.css" charset="utf-8">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <title>个人起名</title>
+    <style>
+        .sub-title {
+            text-align: center;
+            background: #FF0000;
+            font-size: 20px;
+            height: 80px;
+            line-height: 80px;
+            overflow: hidden;
+        }
+
+        .image-section {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .border-line {
+            display:block;
+            background:rgba(179,159,122,1);
+            -pie-background:rgba(179,159,122,1);
+            border-style:none;
+            border-radius:61px;
+            z-index:14;
+            width:100%;
+            height:2px;
+            position:relative;
+            margin: 0 auto;
+        }
+
+        #satisfy_outframe {
+            width: 20%;
+            margin: 0 auto;
+            box-shadow: 0 0 20px 2px #CCC;
+        }
+
+        .border-text {
+            display: block;
+            background: rgba(255,255,255,0);
+            -pie-background: rgba(255,255,255,0);
+            border-style: none;
+            behavior: url(/PIE.htc);
+            border-radius: 0px;
+            z-index: 21;
+            height: 58px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .lplh-42{
+            line-height:42px;
+        }
+
+        .image-image{
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .text-section{
+            margin-top: 15px;
+        }
+
+        .name_child_principle{
+            text-align: center;
+        }
+
+        .name_chile_principle_text{
+            display: block;
+            background: rgba(255,255,255,0);
+            margin: 0 auto;
+            width: 180px;
+            height: auto;
+        }
+
+        .text-text{
+            font-size: 16px;
+            width: 60%;
+            height: auto;
+            margin-left: 20%;
+        }
+
+        .contact-information{
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .contact-border{
+            width: 100%;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <iframe width="100%" onload="setHeight()" height="1" frameborder="0" src="head.html" id="myiframe"></iframe>
+    <script type="text/javascript">
+        //保证iframe高度自适应
+        function getIframeWindow(obj) {
+            return obj.contentWindow || obj.contentDocument.parentWindow;
+        }
+        function getIframeHeight(obj){
+            var idoc = getIframeWindow(obj).document;
+            if(idoc.body){
+                return Math.max(idoc.body.scrollHeight,idoc.body.offsetHeight);
+            }else if(idoc.documentElement){
+                return Math.max(idoc.documentElement.scrollHeight,idoc.documentElement.offsetHeight);
+            }
+        }
+        function setHeight(){
+            var myiframe = document.getElementById("myiframe");
+            myiframe.height = getIframeHeight(myiframe);
+        }
+    </script>
+</div>
+<!--<div class="sub-title" style="margin-left:-15px; margin-right:-15px;">
+    易学大师，起名要素
+</div>-->
+<div class="title-image">
+    <img class="img-responsive" src="../images/title_image.jpg" style="margin:0 auto;">
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="image-section">
+            <div class="border-text" style="height: auto;">
+                <div class="lplh-42">
+                    <font color="#000000" face="Cabin">
+              <span style="font-size: 20px;">
+                <strong>五行相生相克图</strong>
+              </span>
+                    </font>
+                </div>
+            </div>
+            <div class="image-image">
+                <img class="img-responsive" src="../images/wuxingtu.jpeg" style="margin:0 auto;">
+            </div>
+        </div>
+
+        <div class="image-section">
+            <div class="border-text" style="height: auto;">
+                <div class="lplh-42">
+                    <font color="#000000" face="Cabin">
+              <span style="font-size: 20px;">
+                <strong>五格三才图</strong>
+              </span>
+                    </font>
+                </div>
+            </div>
+            <div class="image-image">
+                <img class="img-responsive" src="../images/sancaiwuge.jpg" style="margin:0 auto;">
+            </div>
+        </div>
+
+        <div class="text-section">
+            <div class="name_child_principle">
+                <div class="name_chile_principle_text">
+                    <font color="#000000" face="Cabin">
+                <span style="font-size: 20px;">
+                  <strong>易学大师 起名原则</strong>
+                </span>
+                    </font>
+                </div>
+            </div>
+
+            <div class="text-text">
+                <p><span>1.打开冰箱门</span></p>
+                <p><span>2.把大象放进去</span></p>
+                <p><span>3.关上冰箱门</span></p>
+                <p><span>3.关上冰箱门</span></p>
+                <p><span>3.关上冰箱门</span></p>
+            </div>
+        </div>
+
+        <div class="text-section">
+            <div class="border-line"></div>
+            <div id="satisfy_outframe">
+                <div class="name_child_principle">
+                    <div class="name_chile_principle_text">
+                        <font color="#000000" face="Cabin">
+                            <span style="font-size: 20px;">
+                                 <strong>大师起名 满意为止</strong>
+                            </span>
+                        </font>
+                    </div>
+                </div>
+            </div>
+            <!--<p class="image-image">
+                <img class="img-responsive" src="../images/zz_10.jpg" style=" width: 300px;margin:0 auto;">
+            </p>-->
+        </div>
+
+        <div>
+            <div class="contact-information">
+                <p><span class="contact-border">-------------------------☆ 杜奕德大师联系方式 ☆-------------------------</span></p>
+            </div>
+
+            <div class="contact-information2 name_child_principle">
+                <div class="phone-number contact-border">
+                    <p><span>手机号/微信号: &nbsp;&nbsp;13601994039</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

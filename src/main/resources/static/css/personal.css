@@ -1,0 +1,10 @@
+.title-image{
+    width: 100%;
+    height: 164px;
+}
+
+#satisfy_outframe {
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 2px #CCC;
+}
